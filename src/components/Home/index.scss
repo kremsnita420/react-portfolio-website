@@ -1,3 +1,5 @@
+@import '../../base-styles/variables';
+
 .home-page {
   .text-zone {
     position: absolute;
@@ -11,7 +13,7 @@
       &:before {
         content: '<h1>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: $gold-yellow;
         font-size: 18px;
         position: relative;
         // margin-top: -30px
@@ -22,7 +24,7 @@
       &:after {
         content: '</h1>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: $gold-yellow;
         font-size: 18px;
         position: relative;
         left: -10px;
@@ -33,7 +35,7 @@
       }
 
       h1 {
-        color: #fff;
+        color: $white;
         font-size: 56px;
         line-height: 53px;
         margin: 0;
@@ -58,7 +60,6 @@
       h2 {
         color: #8d8d8d;
         font-weight: 400;
-        font-size: 11px;
         font-family: sans-serif;
         letter-spacing: 3px;
         animation: fadeIn 1s 1.8s backwards;
@@ -67,7 +68,7 @@
       &:before {
         content: '<h2>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: $gold-yellow;
         font-size: 18px;
         position: relative;
         left: -10px;
@@ -77,7 +78,7 @@
       &:after {
         content: '<h2/>';
         font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
+        color: $gold-yellow;
         font-size: 18px;
         position: relative;
         left: -10px;
@@ -88,14 +89,14 @@
     }
   }
   .flat-button {
-    color: #ffd700;
+    color: $gold-yellow;
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 4px;
     font-family: sans-serif;
     text-decoration: none;
     padding: 10px 18px;
-    border: 1px solid #ffd700;
+    border: 1px solid $gold-yellow;
     margin-top: 25px;
     float: left;
     animation: fadeInAnimation 1s 1.8s backwards;
@@ -103,8 +104,44 @@
     transition: color 0.3s ease, background 0.3s ease;
 
     &:hover {
-      background: #ffd700;
+      background: $gold-yellow;
       color: #333;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .tags,
+  .home-page h1:before,
+  .home-page h1:after {
+    display: none;
+  }
+
+  .home-page .text-zone {
+    position: initial;
+    width: 100% !important;
+    transform: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .home-page .flat-button {
+    float: none;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 124px;
+  }
+
+  .logo-container {
+    display: none;
+  }
+
+  .logo-container svg {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: auto;
   }
 }

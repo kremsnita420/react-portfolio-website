@@ -1,3 +1,4 @@
+@import '../../../base-styles/variables';
 .logo-container {
   z-index: 0;
   width: 400px;
@@ -32,6 +33,6 @@
 }
 
 .svg-container {
-  stroke: #ffd700;
+  stroke: $gold-yellow;
   stroke-width: 10;
 }
